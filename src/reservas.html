@@ -1,0 +1,64 @@
+<div class="reservas-page">
+  <h1>Reserva de Assentos</h1>
+
+  <!-- Seleção de Filme e Tipo -->
+  <div class="selection-container">
+    <h2>Escolha o Filme</h2>
+    <div class="movie-options">
+      <div class="movie-card-1" data-filme="1">
+        <img src="global/mufasa.jpg" alt="Filme 1" />
+        <h3>Mufasa</h3>
+      </div>
+      <div class="movie-card-1" data-filme="2">
+        <img src="global/homem do saco.webp" alt="Filme 2" />
+        <h3>Homem do Saco</h3>
+      </div>
+      <div class="movie-card-1" data-filme="3">
+        <img src="global/capitão america.jpg" alt="Filme 3" />
+        <h3>Capitão America</h3>
+      </div>
+    </div>
+
+    <h2>Escolha o Tipo</h2>
+    <div class="type-options">
+      <button class="type-button" data-tipo="2D">2D</button>
+      <button class="type-button" data-tipo="3D">3D</button>
+    </div>
+
+    <button id="confirmar-filme" class="confirm-button">Confirmar</button>
+  </div>
+
+  <!-- Tela e Assentos (inicialmente ocultos) -->
+  <div class="cinema-container" id="cinema-container" style="display: none">
+    <div class="screen">TELA</div>
+
+    <!-- Legenda -->
+    <div class="legenda">
+      <div class="legenda-item">
+        <div class="box livre"></div>
+        <span>Livre</span>
+      </div>
+      <div class="legenda-item">
+        <div class="box selecionado"></div>
+        <span>Selecionado</span>
+      </div>
+      <div class="legenda-item">
+        <div class="box ocupado"></div>
+        <span>Ocupado</span>
+      </div>
+    </div>
+
+    <!-- Assentos -->
+    <div class="seats-container" id="seats-container"></div>
+
+    <!-- Pop-up -->
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h2>Assentos Selecionados</h2>
+        <p id="popup-seats"></p>
+        <p>Total: R$ <span id="popup-total"></span></p>
+        <button id="close-popup">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
