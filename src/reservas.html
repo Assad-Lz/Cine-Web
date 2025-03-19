@@ -51,14 +51,61 @@
     <!-- Assentos -->
     <div class="seats-container" id="seats-container"></div>
 
-    <!-- Pop-up -->
-    <div class="popup" id="popup">
-      <div class="popup-content">
-        <h2>Assentos Selecionados</h2>
-        <p id="popup-seats"></p>
-        <p>Total: R$ <span id="popup-total"></span></p>
-        <button id="close-popup">Fechar</button>
+    <!-- Botão Finalizar Compra -->
+    <button id="finalizar-compra" class="confirm-button">
+      Finalizar Compra
+    </button>
+  </div>
+
+  <!-- Pop-up de Pagamento -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>Finalizar Compra</h2>
+      <p>Assentos Selecionados: <span id="popup-seats"></span></p>
+      <p>Total: R$ <span id="popup-total"></span></p>
+
+      <!-- Formulário de Pagamento -->
+      <form id="payment-form">
+        <label for="card-number">Número do Cartão:</label>
+        <input
+          type="text"
+          id="card-number"
+          placeholder="1234 5678 9012 3456"
+          required
+        />
+
+        <label for="card-name">Nome no Cartão:</label>
+        <input type="text" id="card-name" placeholder="João Silva" required />
+
+        <label for="card-expiry">Validade:</label>
+        <input type="text" id="card-expiry" placeholder="MM/AA" required />
+
+        <label for="card-cvv">CVV:</label>
+        <input type="text" id="card-cvv" placeholder="123" required />
+
+        <label for="card-brand">Bandeira:</label>
+        <select id="card-brand" required>
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="amex">American Express</option>
+          <option value="elo">Elo</option>
+        </select>
+
+        <button type="submit">Pagar com Cartão</button>
+      </form>
+
+      <!-- Pagamento via PIX -->
+      <div class="pix-payment">
+        <h3>Ou pague via PIX</h3>
+        <img
+          src="global/codigo_qr-300x300.png"
+          alt="QR Code PIX"
+          class="qrcode"
+        />
+        <p>Escaneie o QR Code acima para pagar.</p>
       </div>
+
+      <button id="close-popup">Fechar</button>
     </div>
   </div>
 </div>

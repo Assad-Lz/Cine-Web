@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const popupSeats = document.getElementById("popup-seats");
     const popupTotal = document.getElementById("popup-total");
     const closePopupButton = document.getElementById("close-popup");
+    const finalizarCompraButton = document.getElementById("finalizar-compra");
 
     const pricePerSeat = tipo === "2D" ? 20 : 30; // Preço por assento
     let selectedSeats = [];
@@ -140,20 +141,25 @@ document.addEventListener("DOMContentLoaded", () => {
         seat.classList.add("selecionado");
       }
 
-      updatePopup();
+      updateInfo();
     }
 
-    // Atualizar pop-up
-    function updatePopup() {
-      if (selectedSeats.length > 0) {
-        popupSeats.textContent = selectedSeats.join(", ");
-        totalPrice = selectedSeats.length * pricePerSeat;
-        popupTotal.textContent = totalPrice.toFixed(2);
-        popup.classList.add("visible");
-      } else {
-        popup.classList.remove("visible");
-      }
+    // Atualizar informações
+    function updateInfo() {
+      popupSeats.textContent = selectedSeats.join(", ");
+      totalPrice = selectedSeats.length * pricePerSeat;
+      popupTotal.textContent = totalPrice.toFixed(2);
     }
+
+    // Exibir pop-up ao finalizar compra
+    finalizarCompraButton.addEventListener("click", () => {
+      if (selectedSeats.length === 0) {
+        alert("Selecione pelo menos um assento!");
+        return;
+      }
+
+      popup.classList.add("visible");
+    });
 
     // Fechar pop-up
     closePopupButton.addEventListener("click", () => {

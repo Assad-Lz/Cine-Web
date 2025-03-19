@@ -13,22 +13,49 @@
     <h2>Filmes em Destaque</h2>
     <div class="movie-grid">
       <div class="movie-card" data-filme="1">
-        <img src="global/capitão america.jpg" alt="Filme 1" />
-        <h3>Capitão America</h3>
-        <p>Um filme incrível cheio de ação e aventura.</p>
-        <button class="movie-button">Reservar</button>
+        <div class="movie-card-img">
+          <img src="global/capitão america.jpg" alt="Filme 1" />
+        </div>
+        <div class="movie-info">
+          <h3>Filme 1</h3>
+          <p>Um filme incrível cheio de ação e aventura.</p>
+          <button
+            class="movie-button"
+            onclick="window.location.href='reservas.html'"
+          >
+            Reservar
+          </button>
+        </div>
       </div>
       <div class="movie-card" data-filme="2">
-        <img src="global/homem do saco.webp" alt="Filme 2" />
-        <h3>Filme 2</h3>
-        <p>Um terror incrivel e classico</p>
-        <button class="movie-button">Reservar</button>
+        <div class="movie-card-img">
+          <img src="global/homem do saco.webp" alt="Filme 2" />
+        </div>
+        <div class="movie-info">
+          <h3>Filme 2</h3>
+          <p>Uma comédia emocionante para toda a família.</p>
+          <button
+            class="movie-button"
+            onclick="window.location.href='reservas.html'"
+          >
+            Reservar
+          </button>
+        </div>
       </div>
       <div class="movie-card" data-filme="3">
-        <img src="global/mufasa.jpg" alt="Filme 3" />
-        <h3>Filme 3</h3>
-        <p>Live action de um dos maiores classicos .</p>
-        <button class="movie-button">Reservar</button>
+        <div class="movie-card-img">
+          <img src="global/mufasa.jpg" alt="Filme 3" />
+        </div>
+        <div class="movie-info">
+          <h3>Filme 3</h3>
+          <p>Um drama intenso que vai te surpreender.</p>
+          <button
+            class="movie-button"
+            onclick="window.location.href='reservas.html'"
+          >
+            Reservar
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -48,7 +75,7 @@
     <h2>Novidades e Eventos</h2>
     <div class="news-grid">
       <div class="news-card">
-        <img src="assets/evento1.jpg" alt="Evento 1" />
+        <img src="global/noite terror.jpg" alt="Evento 1" />
         <h3>Noite do Terror</h3>
         <p>
           Venha curtir uma noite de filmes de terror com pipoca e refrigerante
@@ -56,7 +83,10 @@
         </p>
       </div>
       <div class="news-card">
-        <img src="assets/evento2.jpg" alt="Evento 2" />
+        <img
+          src="global/photocall-festival-de-cinema-minimo_23-2149912480.avif"
+          alt="Evento 2"
+        />
         <h3>Festival de Cinema</h3>
         <p>Assista aos melhores filmes independentes de 2023.</p>
       </div>
